@@ -1,7 +1,7 @@
-# Automation AI - MVP Specification
+# FlowZone - MVP Specification
 
 ## Overview
-The Automation AI is a personal assistant webapp designed to help users manage their schedule, tasks, and time effectively. It uses AI to understand user needs, automate scheduling, and provide intelligent task management.
+FlowZone is a personal assistant webapp designed to help users manage their schedule, tasks, and time effectively. It uses AI to understand user needs, automate scheduling, and provide intelligent task management.
 
 ## Core Features
 
@@ -24,6 +24,13 @@ The Automation AI is a personal assistant webapp designed to help users manage t
 - Resource suggestions in card format below the timer
 - AI-generated guidelines for tasks without specific resource requirements
 
+### 4. AI Chat Interface
+- Dedicated chat panel for direct interaction with the AI assistant
+- Natural language communication for task creation and management
+- Context-aware responses based on user's schedule and tasks
+- Command suggestions and guided interactions
+- History of previous conversations for reference
+
 ## MVP Implementation Plan
 
 ### Step 1: Setup Development Environment
@@ -37,7 +44,7 @@ The Automation AI is a personal assistant webapp designed to help users manage t
 - Create user profile management
 
 ### Step 3: Database Design
-- Design schema for users, tasks, schedules, and preferences
+- Design schema for users, tasks, schedules, preferences, and chat history
 - Implement data models and relationships
 - Set up cloud database service
 
@@ -51,6 +58,7 @@ The Automation AI is a personal assistant webapp designed to help users manage t
 - Create task creation and management interface
 - Build calendar view component
 - Develop timer interface with description and resource areas
+- Create AI chat panel with message history display
 
 ### Step 6: AI Components
 - Implement natural language processing for task interpretation
@@ -58,6 +66,7 @@ The Automation AI is a personal assistant webapp designed to help users manage t
 - Develop task breakdown functionality
 - Build resource suggestion system
 - Implement scheduling optimization
+- Design conversational AI system for chat interface
 
 ### Step 7: Notification System
 - Design notification preferences
@@ -100,6 +109,7 @@ The Automation AI is a personal assistant webapp designed to help users manage t
    - Backend: Node.js with Express
    - Database: MongoDB (Atlas for cloud hosting)
    - Authentication: Firebase Authentication
+   - AI Services: OpenAI API or equivalent
 
 3. **Project Structure**
    - Organize folders for components, API services, hooks, redux store
@@ -116,7 +126,7 @@ The Automation AI is a personal assistant webapp designed to help users manage t
 
 5. **Database & Backend Setup**
    - Create MongoDB Atlas cluster
-   - Set up Mongoose schemas for User, Task, Schedule
+   - Set up Mongoose schemas for User, Task, Schedule, and Chat
    - Develop Express API routes for CRUD operations
    - Implement JWT authentication middleware
 
@@ -125,6 +135,7 @@ The Automation AI is a personal assistant webapp designed to help users manage t
    - Develop calendar view component
    - Create task input form
    - Implement task list with status indicators
+   - Design chat panel layout with message bubbles
 
 ### Phase 3: Calendar & Task Management (Weeks 4-5)
 
@@ -166,41 +177,51 @@ The Automation AI is a personal assistant webapp designed to help users manage t
     - Build card-based resource display
     - Develop resource saving/favoriting
 
+13. **Chat Interface System**
+    - Create real-time chat component
+    - Implement message sending and receiving functionality
+    - Develop context management for conversations
+    - Build AI response generation system
+    - Implement command parsing for chat actions
+    - Create suggestion chips for common actions
+
 ### Phase 5: Notification & Final Features (Week 8)
 
-13. **Notification System**
+14. **Notification System**
     - Implement browser notifications
     - Create notification preferences panel
     - Build notification queue management
     - Develop reminder scheduling
 
-14. **Task Breakdown Feature**
+15. **Task Breakdown Feature**
     - Create subtask generation system
     - Implement drag-and-drop subtask organization
     - Build progress tracking for subtasks
     - Develop AI-assisted task breakdown
 
-15. **Final Touches**
+16. **Final Touches**
     - Implement mobile responsiveness
     - Add dark/light mode
     - Create onboarding tutorial
     - Optimize performance
+    - Polish chat interface and responses
 
 ### Phase 6: Testing & Deployment (Weeks 9-10)
 
-16. **Testing**
+17. **Testing**
     - Write unit tests for React components
     - Create integration tests for API endpoints
     - Perform cross-browser testing
     - Conduct user acceptance testing
+    - Test conversation flows in chat interface
 
-17. **Deployment Preparation**
+18. **Deployment Preparation**
     - Set up CI/CD pipeline (GitHub Actions)
     - Configure production environment variables
     - Implement error logging (Sentry)
     - Create documentation
 
-18. **Launch**
+19. **Launch**
     - Deploy backend to cloud service (Heroku, Vercel)
     - Deploy frontend application
     - Set up monitoring and analytics
@@ -208,17 +229,19 @@ The Automation AI is a personal assistant webapp designed to help users manage t
 
 ### Phase 7: Post-Launch (Ongoing)
 
-19. **Gather User Feedback**
+20. **Gather User Feedback**
     - Implement in-app feedback system
     - Create user surveys
     - Monitor usage patterns
     - Collect bug reports
+    - Analyze chat conversation logs to improve AI responses
 
-20. **Iterate and Improve**
+21. **Iterate and Improve**
     - Prioritize feature requests
     - Fix bugs and issues
     - Implement performance improvements
     - Plan version 2.0 based on feedback
+    - Enhance AI conversation capabilities
 
 ## Technical Considerations
 
@@ -227,23 +250,27 @@ The Automation AI is a personal assistant webapp designed to help users manage t
 - Redux/Vuex for state management
 - Responsive design for multi-device support
 - Progressive Web App capabilities
+- WebSocket implementation for real-time chat
 
 ### Backend
 - Node.js/Python for server-side logic
 - RESTful API design
 - WebSockets for real-time updates
 - Secure API endpoints
+- AI service integration
 
 ### AI/ML
 - Natural Language Processing for command interpretation
 - Machine Learning for task prioritization
 - Recommendation systems for resources
 - Personalization based on user behavior
+- Conversational AI for chat interface
 
 ### Data Storage
 - User data in secure database (MongoDB/PostgreSQL)
 - Task history for improving recommendations
 - User preferences and settings
+- Chat history and conversation context storage
 
 ## Future Enhancements
 - Mobile application versions
@@ -251,3 +278,5 @@ The Automation AI is a personal assistant webapp designed to help users manage t
 - Advanced analytics and insights
 - Team collaboration features
 - Voice command capabilities
+- Enhanced conversational abilities with multi-turn dialogue
+- Integration with voice assistants like Alexa or Google Assistant
